@@ -1,11 +1,11 @@
 <form class="column-form" #foodform="ngForm" (ngSubmit)="onSubmit(foodform)">
-    <mat-form-field class="example-full-width">
-      <mat-label>Food</mat-label>
-      <input type="text" name="name" matInput placeholder="Food name" ngModel required>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <mat-label>Unit</mat-label>
-      <input type="text" matInput placeholder="gr" name="unit" ngModel>
-    </mat-form-field>
-    <button mat-raised-button color="primary" type="submit" [disabled]="!foodform.valid">Salva</button>
+  <mat-form-field>
+    <mat-label>Food</mat-label>
+    <input type="text" name="name" matInput placeholder="Food name" ngModel required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Unit</mat-label>
+    <input type="text" matInput placeholder="gr" name="unit" ngModel>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!foodform.valid">Salva</button>
   </form>

@@ -10,9 +10,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatOptionModule } from '@angular/material/core';
+import { MatOptionModule, MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { MatTableModule } from '@angular/material/table';
     MatAutocompleteModule,
     MatOptionModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
