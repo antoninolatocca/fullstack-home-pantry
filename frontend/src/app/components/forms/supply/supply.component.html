@@ -1,0 +1,26 @@
+<form class="column-form" #supplyform="ngForm" (ngSubmit)="onSubmit(supplyform)">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Food</mat-label>
+    <input type="text"
+        placeholder="Pick one"
+        aria-label="food"
+        matInput
+        [formControl]="myControl"
+        [matAutocomplete]="auto"
+        name="food"
+        ngModel
+        required
+      >
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Quantity</mat-label>
+    <input type="number" matInput placeholder="1" name="quantity" ngModel required>
+    <span matSuffix>{{activeUnit}}</span>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!supplyform.valid">Salva</button>
+</form>
