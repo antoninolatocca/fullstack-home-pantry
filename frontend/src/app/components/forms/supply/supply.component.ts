@@ -23,7 +23,7 @@ export class SupplyComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.apiService.getAllFoods().then(foodList => this.options.push(foodList.map((food:IFood) => food.name)));
+    this.apiService.getAllFoods().then(foodList => this.options = foodList.map((food:IFood) => food.name));
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value || '')),

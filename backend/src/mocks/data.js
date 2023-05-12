@@ -1,8 +1,18 @@
 export const FOOD_LIST = [
 	{
 		id: 1,
-		name: "Pomodori",
+		name: "Pomodori datterino",
 		unit: "pomodoro"
+	},
+	{
+		id: 2,
+		name: "Tonno sott'olio Rio Mare da 80g",
+		unit: "lattina"
+	},
+	{
+		id: 3,
+		name: "Sale fino",
+		unit: "gr"
 	}
 ]
 
